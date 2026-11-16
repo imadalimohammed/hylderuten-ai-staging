@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indkøbspiloten – Privat forberedelse af rigtig Turnstile</title>
+<style>
+:root{font:16px system-ui,-apple-system,sans-serif;color:#1d2e4a;background:#f4f7fb}
+*{box-sizing:border-box}main{max-width:760px;margin:4rem auto;padding:2rem;border:1px solid #ccdaec;border-radius:16px;background:#fff;line-height:1.55}
+button{border:0;border-radius:8px;background:#194a80;color:white;padding:12px 17px;margin:6px 8px 6px 0;font:inherit}
+button:disabled{opacity:.5}.secondary{background:#e9eef6;color:#194a80}
+#check-status{padding:13px;border-radius:8px;background:#edf3fb}small{color:#52677e}
+</style>
+</head>
+<body>
+<main id="turnstile-live-root" data-activation="approved" data-public-sitekey="0x4AAAAAAF-bT9sITnY6h3cT">
+<h1>B5i-B · Privat klargøring af rigtig Turnstile</h1>
+<p><strong>Deaktiveret.</strong> Denne side er kun kildekodeforberedelse. Den indlæser ikke Cloudflares widget, genererer intet token og kalder hverken backend eller AI.</p>
+<div id="check-widget" aria-label="Plads til en fremtidig Turnstile-widget"></div>
+<button id="start-check" type="button">Start sikkerhedskontrol</button>
+<button id="reset-check" type="button" class="secondary">Nulstil</button>
+<p id="check-status" role="status" aria-live="polite">Ikke aktiveret. Afventer separat godkendelse og offentlig Site Key.</p>
+<small>Et browser-token giver ikke adgang til AI. Senere kræves server-side Siteverify. Secret Key må aldrig placeres i HTML.</small>
+</main>
+
+<script src="./turnstile-check.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&amp;onload=HR_B5IB_onTurnstileReady" defer></script>
+</body>
+</html>
